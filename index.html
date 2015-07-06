@@ -21,10 +21,12 @@ h2 small { font-weight: 100; color: #eee; opacity: 0.5;}
 p { margin: 20px 0;}
 body::before { height: 100%; width: 100%; content: ''; display: block; position: absolute;top:0;right:0; background: url(/img/bg_blur.jpg) no-repeat transparent; background-size: cover;
       -webkit-clip-path: url(#sidebarclip); z-index: 1; clip-path: url(#sidebarclip);}
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1000px), screen and (max-height: 600px) {
   #sidebar { width:100%;}
   body::before { -webkit-clip-path: inherit !important; clip-path: inherit !important }
 }
+
+#sidebar .btn-success { background: transparent; border-color: whiteSmoke; }
 #sidebar .btn-default { color: whiteSmoke; border-width: 1px;}
 #sidebar .btn-default:not(:hover) {  opacity: 0.8;}
 </style>
@@ -49,10 +51,26 @@ body::before { height: 100%; width: 100%; content: ''; display: block; position:
     Erscheint im Oktober 2015.
   </p>
 
-  <a class="btn btn-default btn-block" href="https://twitter.com/jonasschneider">Folge <span class="a">@jonasschneider</span> für alle Infos!</a>
+<link href="//cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css">
+<form action="//media.us11.list-manage.com/subscribe/post?u=86824613c18db9462d27986c1&amp;id=964860f5c6" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate style="margin-bottom:20px">
+  <div class="row">
+    <div class="col-xs-8">
+    <input required type="email" value="" name="EMAIL" class="form-control" id="mce-EMAIL" placeholder="Deine E-Mail-Adresse">
+    </div><div class="col-xs-4" style="padding-left: 0; opacity: 0.8">
+      <button class="btn btn-success" type="submit">Newsletter!</button>
+    </div>
   </div>
+  <div id="mce-responses" class="clear">
+    <div class="response" id="mce-error-response" style="display:none"></div>
+    <div class="response" id="mce-success-response" style="display:none"></div>
+  </div>
+  <div style="position: absolute; left: -5000px;"><input type="text" name="b_86824613c18db9462d27986c1_964860f5c6" tabindex="-1" value=""></div>
+</form>
+<!--
+  <a class="btn btn-default btn-block" href="https://twitter.com/jonasschneider">Folge <span class="a">@jonasschneider</span> für aktuelle Infos!</a>
+-->
 
-  <div><!-- bot -->
+  </div><div><!-- bot -->
     <p style="text-align:right;font-style:italic;opacity:0.8;font-size:85%">Ein NOCTURN media Projekt.<br>
       <a href="mailto:mail@jonasschneider.com">Kontakt | Impressum</a>
     </p>
