@@ -166,7 +166,6 @@ var twitterFetcher = function() {
                 b = "";
 
                 xx = e[a]
-                console.log(xx)
                 $(".hashtag", xx).remove()
                 $("[data-pre-embedded]", xx).remove()
                 pic = $(".photo-link", xx)[0]
@@ -174,9 +173,10 @@ var twitterFetcher = function() {
                 $("img", pic).css("width", "100%")
 
                 pl = $(".permalink", xx).attr("href")
-                console.log(f[a].innerText)
-                mt = f[a].innerText.split("Posted ")[0]
-                meta = "<a class=meta href=\""+pl+"\">Jonas, "+mt+" ago</a>"
+                mt = f[a].innerText
+                  ? f[a].innerText.split("Posted ")[0] + " ago"
+                  : $(f[a])[0].getAttribute("aria-label").split("Posted ")[1];
+                meta = "<a class=meta target=_blank href=\""+pl+"\">Jonas, "+mt+"</a>"
 
                 e[a] = $(".e-entry-title", e[a])[0]
                 s ? (b += '<div class="tweet"><p>' + x(e[a].innerHTML) + meta+"</p>"+(pic ? pic.outerHTML : "")+"</div>", q && 1) : e[a].innerText ? (r && (b += '<p class="user">' + g[a].innerText + "</p>"),
@@ -212,6 +212,7 @@ twitterFetcher.fetch( '626094461840433152', 'tweets', 3, true)
   float: right;
   opacity: 0.8;
   font-size: 90%;
+  display: inline-block;
 }
 #tweets p { margin: 10px;}
 
