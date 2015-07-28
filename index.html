@@ -20,9 +20,15 @@ h2 { font-family: Oswald; font-weight: 400;}
 h2 small { font-weight: 100; color: #eee; opacity: 0.5;}
 p { margin: 20px 0;}
 #vid { min-height: 100%; min-width: 100%; content: ''; display: block; position: absolute;top:0;right:0; overflow: hidden;}
+#vid iframe { height: 100vh; width: 70%;}
 @media screen and (max-width: 1000px), screen and (max-height: 600px) {
-  #sidebar { width:100%; background: rgba(0,0,0,0.3);}
-  body::before { -webkit-clip-path: inherit !important; clip-path: inherit !important }
+  #main { background: url(/img/bg_blur.jpg) black no-repeat bottom;}
+  #vid { position: static; min-height: 0;}
+  #vid iframe { width: 100%; height: 90vh; }
+  #sidebar { position:static; width:50%; background: rgba(0,0,0,0.3);}
+}
+@media screen and (max-width: 800px) {
+  #sidebar { width: 100%;}
 }
 
 #sidebar .btn-success { background: transparent; border-color: whiteSmoke; }
@@ -31,15 +37,10 @@ p { margin: 20px 0;}
 </style>
 <body>
   <div id="vid">
-    <iframe src="https://player.vimeo.com/video/134590216?autoplay=1&color=ffffff&title=0&byline=0&portrait=0" style="width:70%;height:100vh" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    <iframe src="https://player.vimeo.com/video/134590216?autoplay=1&color=ffffff&title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
   </div>
 
-<svg width="100%" height="100%" style="position: absolute;pointer-events:none">
-  <defs>
-  <clipPath id="sidebarclip">
-  <rect x="70%" y="0" width="30%" height="100%" />
-</clipPath>
-</defs></svg>
+<div id="main">
   <div id="sidebar">
     <div>
   <h2>Lux Fugacis <small>lat. <em>Licht, fliehend&nbsp;</em></small></h2>
@@ -78,4 +79,5 @@ p { margin: 20px 0;}
       <a href="mailto:mail@jonasschneider.com">Kontakt | Impressum</a>
     </p>
   </div>
+</div>
 </body></html>
