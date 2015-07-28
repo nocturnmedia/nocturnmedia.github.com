@@ -15,11 +15,11 @@
   </head>
 <style>
 body { width: 100%; height: 100%; background: black; color: #eee; font-family: 'Open Sans', sans-serif; }
-#sidebar { width: 30%; position: fixed; right: 0; height: 100%; padding: 2em; background: linear-gradient(90deg, rgba(0,0,0,0.7), black 50%); opacity: 0.9; border-left: 1px solid rgba(255,255,255,0.3); display: flex;flex-direction: column; justify-content: space-between; z-index: 2;}
+#sidebar { width: 30%; position: absolute; right: 0; height: 100%; padding: 2em; background: linear-gradient(90deg, rgba(0,0,0,0.7), black 50%); opacity: 0.9; border-left: 1px solid rgba(255,255,255,0.3); display: flex;flex-direction: column; justify-content: space-between; z-index: 2;}
 h2 { font-family: Oswald; font-weight: 400;}
 h2 small { font-weight: 100; color: #eee; opacity: 0.5;}
 p { margin: 20px 0;}
-#vid { min-height: 100%; min-width: 100%; content: ''; display: block; position: absolute;top:0;right:0; overflow: hidden;}
+#vid { min-height: 100%; min-width: 100%; content: ''; display: block; position: fixed;top:0;right:0; overflow: hidden;}
 #vid iframe { height: 100vh; width: 70%;}
 @media screen and (max-width: 1000px), screen and (max-height: 600px) {
   #main { background: url(/img/bg_blur.jpg) black no-repeat bottom;}
@@ -45,14 +45,14 @@ p { margin: 20px 0;}
     <div>
   <h2>Lux Fugacis <small>lat. <em>Licht, fliehend&nbsp;</em></small></h2>
 
-  <p><em>Wenn die Sonne über Karlsruhe untergeht, erwachen die Lichter und Schatten der Nacht.</em></p>
+  <!--<p><em>Wenn die Sonne über Karlsruhe untergeht, erwachen die Lichter und Schatten der Nacht.</em></p>-->
 
   <p>Die <strong>Schlosslichtspiele</strong> sind einer der Höhepunkte des Karlsruher Stadtgeburtstags: vor den Augen tausender Zuschauer im Schlossgarten wird die über 300 Meter lange Fassade zu einer riesigen Leinwand. Gezeigt wird ein diverses Programm internationaler Projektionskünstler.</p>
 
   <p>Wir begleiten die Künstler und ihre Werke auf dem Weg zur Schlossfassade, blicken auf die Hintergründe der Stücke und ihre technische Umsetzung.</p>
 
   <p>
-    Erscheint im Oktober 2015.
+    Erscheint im Herbst 2015.
   </p>
 
 <link href="//cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css">
@@ -70,9 +70,154 @@ p { margin: 20px 0;}
   </div>
   <div style="position: absolute; left: -5000px;"><input type="text" name="b_86824613c18db9462d27986c1_964860f5c6" tabindex="-1" value=""></div>
 </form>
-<!--
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script>
+/*********************************************************************
+ *  #### Twitter Post Fetcher v10.0 ####
+ *  Coded by Jason Mayes 2013. A present to all the developers out there.
+ *  www.jasonmayes.com
+ *  Please keep this disclaimer with my code if you use it. Thanks. :-)
+ *  Got feedback or questions, ask here:
+ *  http://www.jasonmayes.com/projects/twitterApi/
+ *  Updates will be posted to this site.
+ *********************************************************************/
+var twitterFetcher = function() {
+    function x(e) {
+        return e.replace(/<b[^>]*>(.*?)<\/b>/gi, function(c, e) {
+            return e
+        }).replace(/class=".*?"|data-query-source=".*?"|dir=".*?"|rel=".*?"/gi, "")
+    }
+
+    function p(e, c) {
+        for (var g = [], f = RegExp("(^| )" + c + "( |$)"), a = e.getElementsByTagName("*"), h = 0, d = a.length; h < d; h++) f.test(a[h].className) && g.push(a[h]);
+        return g
+    }
+    var y = "",
+        l = 20,
+        s = !0,
+        k = [],
+        t = !1,
+        q = !0,
+        r = !0,
+        u = null,
+        v = !0,
+        z = !0,
+        w = null,
+        A = !0;
+    return {
+        fetch: function(e, c, g, f, a, h, d, b, m, n) {
+            void 0 === g && (g = 20);
+            void 0 === f && (s = !0);
+            void 0 === a && (a = !0);
+            void 0 === h && (h = !0);
+            void 0 === d && (d = "default");
+            void 0 === b && (b = !0);
+            void 0 === m && (m = null);
+            void 0 === n && (n = !0);
+            t ? k.push({
+                id: e,
+                domId: c,
+                maxTweets: g,
+                enableLinks: f,
+                showUser: a,
+                showTime: h,
+                dateFunction: d,
+                showRt: b,
+                customCallback: m,
+                showInteraction: n
+            }) : (t = !0, y = c, l = g, s = f, r = a, q = h, z = b, u = d, w = m, A = n, c = document.createElement("script"), c.type = "text/javascript", c.src = "//cdn.syndication.twimg.com/widgets/timelines/" + e + "?&lang=en&callback=twitterFetcher.callback&suppress_response_codes=true&rnd=" + Math.random(), document.getElementsByTagName("head")[0].appendChild(c))
+        },
+        callback: function(e) {
+            var c = document.createElement("div");
+            c.innerHTML = e.body;
+            "undefined" === typeof c.getElementsByClassName && (v = !1);
+            e = [];
+            var g = [],
+                f = [],
+                a = [],
+                h = [],
+                d = 0;
+            if (v)
+                for (c = c.getElementsByClassName("tweet"); d < c.length;) {
+                    0 < c[d].getElementsByClassName("retweet-credit").length ? a.push(!0) : a.push(!1);
+                    if (!a[d] || a[d] && z) e.push(c[d]), h.push(c[d].getAttribute("data-tweet-id")), g.push(c[d].getElementsByClassName("p-author")[0]), f.push(c[d].getElementsByClassName("dt-updated")[0]);
+                    d++
+                } else
+                    for (c = p(c, "tweet"); d < c.length;) e.push(c[d]), h.push(c[d].getAttribute("data-tweet-id")), g.push(p(c[d], "p-author")[0]), f.push(p(c[d], "dt-updated")[0]), 0 < p(c[d], "retweet-credit").length ? a.push(!0) : a.push(!1), d++;
+            e.length > l && (e.splice(l, e.length - l), g.splice(l, g.length - l), f.splice(l, f.length - l), a.splice(l, a.length - l));
+            c = [];
+            d = e.length;
+            for (a = 0; a < d;) {
+                if ("string" !== typeof u) {
+                    var b = new Date(f[a].getAttribute("datetime").replace(/-/g, "/").replace("T", " ").split("+")[0]),
+                        b = u(b);
+                    f[a].setAttribute("aria-label", b);
+                    if (e[a].innerText)
+                        if (v) f[a].innerText = b;
+                        else {
+                            var m = document.createElement("p"),
+                                n = document.createTextNode(b);
+                            m.appendChild(n);
+                            m.setAttribute("aria-label", b);
+                            f[a] = m
+                        } else f[a].textContent = b
+                }
+                b = "";
+
+                xx = e[a]
+                console.log(xx)
+                $(".hashtag", xx).remove()
+                $("[data-pre-embedded]", xx).remove()
+                pic = $(".photo-link", xx)[0]
+                $("img",pic).attr("src", unescape($("img",pic).attr("data-srcset").split(" ")[0]))
+                $("img", pic).css("width", "100%")
+
+                pl = $(".permalink", xx).attr("href")
+                console.log(f[a].innerText)
+                mt = f[a].innerText.split("Posted ")[0]
+                meta = "<a class=meta href=\""+pl+"\">Jonas, "+mt+" ago</a>"
+
+                e[a] = $(".e-entry-title", e[a])[0]
+                s ? (b += '<div class="tweet"><p>' + x(e[a].innerHTML) + meta+"</p>"+(pic ? pic.outerHTML : "")+"</div>", q && 1) : e[a].innerText ? (r && (b += '<p class="user">' + g[a].innerText + "</p>"),
+                b += '<p class="tweet">' + e[a].innerText +
+                    "a</p>", q && 1) : (r && (b += '<p class="user">' + g[a].textContent + "</p>"), b += '<p class="tweet">' + e[a].innerText + "a</p>", q && (b += '<p class="timePosted">' + f[a].textContent + "</p>"));
+                c.push(b);
+                a++
+            }
+            if (null == w) {
+                e = c.length;
+                g = 0;
+                f = document.getElementById(y);
+                for (h = ""; g < e;) h += c[g], g++;
+                f.innerHTML = h
+            } else w(c);
+            t = !1;
+            0 < k.length && (twitterFetcher.fetch(k[0].id, k[0].domId, k[0].maxTweets, k[0].enableLinks, k[0].showUser, k[0].showTime, k[0].dateFunction, k[0].showRt, k[0].customCallback, k[0].showInteraction), k.splice(0, 1))
+        }
+    }
+}();
+
+
+twitterFetcher.fetch( '626094461840433152', 'tweets', 3, true)
+</script>
+<style>
+#tweets .tweet {
+    border: 1px solid rgba(255,255,255,0.6);
+    border-radius: 5px;
+    margin: 20px 0;
+    clear: both;
+}
+.tweet .meta {
+  float: right;
+  opacity: 0.8;
+  font-size: 90%;
+}
+#tweets p { margin: 10px;}
+
+</style>
+<div id="tweets"></div>
   <a class="btn btn-default btn-block" href="https://twitter.com/jonasschneider">Folge <span class="a">@jonasschneider</span> für aktuelle Infos!</a>
--->
 
   </div><div><!-- bot -->
     <p style="text-align:right;font-style:italic;opacity:0.8;font-size:85%">Ein NOCTURN media Projekt.<br>
