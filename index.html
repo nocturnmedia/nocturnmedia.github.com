@@ -190,6 +190,8 @@ var twitterFetcher = function() {
                 g = 0;
                 f = document.getElementById(y);
                 for (h = ""; g < e;) h += c[g], g++;
+                $(f).addClass("in")
+                setTimeout(function(){$(f).addClass("superin")}, 1600)
                 f.innerHTML = h
             } else w(c);
             t = !1;
@@ -202,6 +204,9 @@ var twitterFetcher = function() {
 twitterFetcher.fetch( '626094461840433152', 'tweets', 3, true)
 </script>
 <style>
+#tweets { max-height: 0; transition: all 0.5s 1s; overflow: hidden;}
+#tweets.in { max-height: 600px;}
+#tweets.superin { max-height: none !important;}
 #tweets .tweet {
     border: 1px solid rgba(255,255,255,0.6);
     border-radius: 5px;
