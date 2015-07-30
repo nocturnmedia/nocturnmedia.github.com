@@ -168,15 +168,19 @@ var twitterFetcher = function() {
                 xx = e[a]
                 $(".hashtag", xx).remove()
                 $("[data-pre-embedded]", xx).remove()
-                pic = $(".photo-link", xx)[0]
-                $("img",pic).attr("src", unescape($("img",pic).attr("data-srcset").split(" ")[0]))
-                $("img", pic).css("width", "100%")
+                var pic = null;
+                if($(".photo-link", xx)[0] && $("img",$(".photo-link", xx)[0])){
+                    pic = $(".photo-link", xx)[0]
+                    $("img",pic).attr("src", unescape($("img",pic).attr("data-srcset").split(" ")[0]))
+                    $("img", pic).css("width", "100%")
+                }
 
                 pl = $(".permalink", xx).attr("href")
+                var author = $(".p-name",xx).text().split(" ")[0]
                 mt = f[a].innerText
-                  ? f[a].innerText.split("Posted ")[0] + " ago"
+                  ? f[a].innerText.split("Posted ")[0]
                   : $(f[a])[0].getAttribute("aria-label").split("Posted ")[1];
-                meta = "<a class=meta target=_blank href=\""+pl+"\">Jonas, "+mt+"</a>"
+                meta = "<a class=meta target=_blank href=\""+pl+"\">"+author+", "+mt+"</a>"
 
                 e[a] = $(".e-entry-title", e[a])[0]
                 s ? (b += '<div class="tweet"><p>' + x(e[a].innerHTML) + meta+"</p>"+(pic ? pic.outerHTML : "")+"</div>", q && 1) : e[a].innerText ? (r && (b += '<p class="user">' + g[a].innerText + "</p>"),
