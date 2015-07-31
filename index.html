@@ -43,23 +43,22 @@ p { margin: 20px 0;}
 <div id="main">
   <div id="sidebar">
     <div>
-  <h2>Lux Fugacis <small>lat. <em>Licht, fliehend&nbsp;</em></small></h2>
+        <p class="english-only" style="display:none;opacity:0.7"><strong>English subtitles available!</strong><br>Click "CC" on the video controls.</p>
+  <h2>Lux Fugacis <small>lat. <em><span data-english="Light, fleeing">Licht, fliehend</span>&nbsp;</em></small></h2>
 
   <!--<p><em>Wenn die Sonne über Karlsruhe untergeht, erwachen die Lichter und Schatten der Nacht.</em></p>-->
 
-  <p>Die <strong>Schlosslichtspiele</strong> sind einer der Höhepunkte des Karlsruher Stadtgeburtstags: vor den Augen tausender Zuschauer im Schlossgarten wird die über 300 Meter lange Fassade zu einer riesigen Leinwand. Gezeigt wird ein diverses Programm internationaler Projektionskünstler.</p>
+  <p><span data-english="The">Die</span> <strong>Schlosslichtspiele</strong> <span data-english=" (Palace Light Games) are one of the highlights of the 300th birthday celebrations of the city of Karlsruhe, Germany. In front of thousands of viewers, the palace's walls are turned into a giant screen. A diverse program created by international projection mapping artists is shown throughout the summer."> sind einer der Höhepunkte des Karlsruher Stadtgeburtstags: vor den Augen tausender Zuschauer im Schlossgarten wird die über 300 Meter lange Fassade zu einer riesigen Leinwand. Gezeigt wird ein diverses Programm internationaler Projektionskünstler.</span></p>
 
-  <p>Wir begleiten die Künstler und ihre Werke auf dem Weg zur Schlossfassade, blicken auf die Hintergründe der Stücke und ihre technische Umsetzung.</p>
+  <p><span data-english="We talk with the artists and analysts about their work and the concepts and ideas behind it, explaining the influences and what remains for the future.">Wir begleiten die Künstler und ihre Werke auf dem Weg zur Schlossfassade, blicken auf die Hintergründe der Stücke und ihre technische Umsetzung.</span></p>
 
-  <p>
-    Erscheint im Herbst 2015.
-  </p>
+  <p><span data-english="Coming this fall.">Erscheint im Herbst 2015.</span></p>
 
 <link href="//cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css">
 <form action="//media.us11.list-manage.com/subscribe/post?u=86824613c18db9462d27986c1&amp;id=964860f5c6" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate style="margin-bottom:20px">
   <div class="row">
     <div class="col-xs-8">
-    <input required type="email" value="" name="EMAIL" class="form-control" id="mce-EMAIL" placeholder="Deine E-Mail-Adresse">
+    <input required type="email" value="" name="EMAIL" class="form-control" id="mce-EMAIL" placeholder="Deine E-Mail-Adresse" data-english-placeholder="Your email">
     </div><div class="col-xs-4" style="padding-left: 0; opacity: 0.8">
       <button class="btn btn-success" type="submit" style="width:100%">Newsletter!</button>
     </div>
@@ -232,10 +231,10 @@ twitterFetcher.fetch( '626094461840433152', 'tweets', 3, true)
 
 </style>
 <div id="tweets"></div>
-  <a class="btn btn-default btn-block" href="https://twitter.com/jonasschneider">Folge uns für aktuelle Infos!</a>
+  <a class="btn btn-default btn-block" href="https://twitter.com/jonasschneider"><span data-english="Follow us for the latest news!">Folge uns für aktuelle Infos!</span></a>
 
   </div><div><!-- bot -->
-    <p style="text-align:right;font-style:italic;opacity:0.8;font-size:85%">Ein NOCTURN media Projekt.<br>
+    <p style="text-align:right;font-style:italic;opacity:0.8;font-size:85%"><span data-english="A Nocturn Media enterprise.">Ein Nocturn Media Projekt.</span><br>
       <a href="mailto:mail@jonasschneider.com" onclick="$('#legal').slideDown();return false">Kontakt | Impressum</a>
     </p>
     <div class="box" style="display:none" id=legal>
@@ -245,4 +244,20 @@ twitterFetcher.fetch( '626094461840433152', 'tweets', 3, true)
     </div>
   </div>
 </div>
+
+<script>
+if(navigator.language.indexOf("de") == -1) {
+    $("[data-english]").each(function(){
+        var el = this;
+        $(el).text($(el).data("english"))
+    })
+
+    $("[data-english-placeholder]").each(function(){
+        var el = this;
+        $(el).attr("placeholder", $(el).data("english-placeholder"))
+    })
+
+    $(".english-only").show()
+}
+</script>
 </body></html>
