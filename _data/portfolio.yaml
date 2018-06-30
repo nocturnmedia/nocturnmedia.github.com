@@ -1,0 +1,107 @@
+- name: dotafive
+  title: OpenAI Five
+  year: 2018
+  youtube: l92J1UvHf6M
+  client: OpenAI
+  credentials:
+    - {name: WaPo, url: "https://www.washingtonpost.com/technology/2018/06/28/elon-musks-openai-bot-beat-human-video-games-last-year-now-it-will-take-five-once/?utm_term=.298974c6ab35"}
+    - {name: CNBC, url: "https://www.cnbc.com/2018/06/27/bill-gates-openai-robots-beating-humans-at-dota-2-is-ai-milestone.html"}
+  story: |
+    OpenAI has created an AI system, OpenAI Five, which has started to defeat amateur human teams.
+    This video contains an overview of the system, some example gameplay,
+    and professional caster Blitz's analysis of the bot,
+    as we start to gear up for playing a professional team at this year's Dota world championships, The International.
+
+    OpenAI blog post: https://blog.openai.com/openai-five.
+
+    Director: Jonas Schneider
+    Starring: Christy Dennison
+    Sound Supervisor: Larissa Schiavo
+    Script Supervisor: Brooke Chan
+    Production Manager: Diane Yoon
+    Camera Operator: Frank Dellario, Manu Smith, Blake Tucker
+    Stills Photographer: Eric Louis Haines, Brian Slaughter
+
+
+- name: ingredients
+  title: Ingredients for Robotics Research
+  year: 2018
+  youtube: l92J1UvHf6M
+  client: OpenAI
+  credentials:
+    - {name: IEEE Spectrum, url: "https://spectrum.ieee.org/automaton/robotics/artificial-intelligence/openai-releases-algorithm-that-helps-robots-learn-from-hindsight"}
+  story: |
+    OpenAI is the world's leading Artifical Intelligence research lab.
+    Co-founded by SpaceX and Tesla chairman Elon Musk, the lab of 60 full-time reseachers
+    has created a bot which beats the world’s top professionals at matches of Dota 2 under standard tournament rules.
+
+    Nocturn Media stepped up to the challenge of conveying these scientific discoveries visually.
+    We advised OpenAI with production, screenwriting, photography, editing, as well as distribution on social media platforms.
+
+- name: dotaone
+  title: OpenAI + Dota 2
+  year: 2017
+  youtube: l92J1UvHf6M
+  client: OpenAI
+  credentials:
+    - {name: CNN, url: "http://money.cnn.com/2017/08/12/technology/future/elon-musk-ai-dota-2/index.html"}
+    - name: ">1M Views"
+  story: |
+    OpenAI is the world's leading Artifical Intelligence research lab.
+    Co-founded by SpaceX and Tesla chairman Elon Musk, the lab of 60 full-time reseachers
+    has created a bot which beats the world’s top professionals at matches of Dota 2 under standard tournament rules.
+
+    Nocturn Media stepped up to the challenge of conveying these scientific discoveries visually.
+    We advised OpenAI with production, screenwriting, photography, editing, as well as distribution on social media platforms.
+
+- name: sandsoftime
+  title: The Sands of Time
+  vimeo: 219974607
+  year: 2017
+  story: |
+    Singapore's Marina South district is crowned by the Marina Bay Sands, a luxurious high-rise resort hotel and casino opened in 2012. It lies between the Marina Bay connecting it to Singapore's city center, and the Gardens By The Bay, a modern public park with light sculptures and event spaces.
+
+    Nocturn Media was tasked with portraying the beautiful landscapes surrounding the Marina Bay region, via aerial cinematography, editing, as well as distribution on social media platforms.
+
+- name: robotsthatlearn
+  title: Robots That Learn
+  client: OpenAI
+  year: 2017
+  vimeo: 217578517
+  credentials:
+    - {name: CNBC, url: "http://www.cnbc.com/2017/05/17/elon-musk-openai-robot.html"}
+  story: |
+     OpenAI is one of the world's leading Artifical Intelligence research labs.
+     Co-founded by SpaceX and Tesla chairman Elon Musk, the lab of 60 full-time reseachers
+     has created a new algorithm that allows robots to learn new behaviors by imitating humans.
+
+     Nocturn Media stepped up to the challenge of conveying these technical scientific discoveries visually. We advised OpenAI with production, screenwriting, photography, motion graphics, editing, as well as distribution on social media platforms.
+
+- name: luxfugacis
+  title: Lux Fugacis
+  year: 2016
+  client: ZKM Karlsruhe
+  vimeo: 134590216 #  137023512
+  story: |
+     The Schlosslichtspiele (Palace Light Games) are one of the highlights of the 300th birthday celebrations of the city of Karlsruhe, Germany. In front of thousands of viewers, the palace's walls are turned into a giant screen. A diverse program created by international projection mapping artists is shown throughout the summer.
+
+     We talk with the artists and analysts about their work and the concepts and ideas behind it, explaining the influences and what remains for the future.
+
+     Nocturn Media was consulted for event management, interview videography, editing, and mastering.
+
+- name: basking
+  title: Basking in Light
+  year: 2015
+  vimeo: 221156784
+  story: |
+     The Lichterfest (lit. light festival) is an annual summer event in the Karlsruhe, Germany zoo.
+
+- name: flashback
+  title: Flashback
+  year: 2011
+  client: Cutting Room
+  vimeo: 25618082
+  story: |
+     A young girl finds the love of her live, but the young couple's relationship is soon strained.
+
+     On this production led by Cutting Room, Nocturn Media was consulted for principial photography, art direction, editing, and distribution on local film festivals.
