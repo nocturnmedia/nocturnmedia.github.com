@@ -1,7 +1,7 @@
 - name: dotafive
   title: OpenAI Five
   year: 2018
-  youtube: l92J1UvHf6M
+  youtube: eHipy_j29Xw
   client: OpenAI
   credentials:
     - {name: WaPo, url: "https://www.washingtonpost.com/technology/2018/06/28/elon-musks-openai-bot-beat-human-video-games-last-year-now-it-will-take-five-once/?utm_term=.298974c6ab35"}
@@ -26,7 +26,7 @@
 - name: ingredients
   title: Ingredients for Robotics Research
   year: 2018
-  youtube: l92J1UvHf6M
+  youtube: 8Np3eC_PTFo
   client: OpenAI
   credentials:
     - {name: IEEE Spectrum, url: "https://spectrum.ieee.org/automaton/robotics/artificial-intelligence/openai-releases-algorithm-that-helps-robots-learn-from-hindsight"}

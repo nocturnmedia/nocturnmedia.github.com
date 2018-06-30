@@ -201,7 +201,7 @@ article.intro { padding: 100px; padding-top:50px; text-align: justify; flex-dire
 <div class="Portfolio">
   <div class="Portfolio-Inner">
 {% for i in site.data.portfolio %}
-  <a href="/" class="Portfolio-Item">
+  <a href="{% if i.youtube %}https://www.youtube.com/watch?v={{ i.youtube }}{% else %}{% if i.vimeo %}https://vimeo.com/{{ i.vimeo }}{% endif %}{% endif %}" class="Portfolio-Item">
     <div class="Portfolio-Item-Meta">
       <h2>{{ i.title }}</h2>
       <div class="Portfolio-Item-Meta-Spacer"></div>
