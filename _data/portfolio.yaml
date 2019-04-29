@@ -1,3 +1,23 @@
+- name: five-finals
+  title: OpenAI Five Dota 2 Finals
+  year: 2019
+  youtube: LVrpWrvHVNE
+  client: OpenAI
+  credentials:
+    - {name: TechCrunch, url: "https://techcrunch.com/2019/04/15/openai-five-crushes-dota2-world-champs-and-soon-you-can-lose-to-it-too/"}
+    - {name: Quartz, url: "https://qz.com/1594765/openai-bots-just-trounced-pro-players-of-dota-2-now-what/"}
+  story:
+
+- name: five-motion
+  title: Dota 2 World Champions &amp; Co-Op
+  year: 2019
+  youtube: NsMYGDJUuxU
+  client: OpenAI
+  credentials:
+    - {name: VentureBeat, url: "https://venturebeat.com/2019/04/22/openais-dota-2-bot-defeated-99-4-of-players-in-public-matches/"}
+  story:
+
+
 - name: dotafive
   title: OpenAI Five
   year: 2018
@@ -99,7 +119,6 @@
 - name: flashback
   title: Flashback
   year: 2011
-  client: Cutting Room
   vimeo: 25618082
   story: |
      A young girl finds the love of her live, but the young couple's relationship is soon strained.
